@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Footballi Hesam</string>
+
+
+    <string-array name="dastearray">
+
+        <item>کتاب های ورزشی</item>
+        <item>سرود رسمی باشگاه ها</item>
+        <item>خلاصه ی بازی های ماندگار</item>
+
+
+    </string-array>
+</resources>

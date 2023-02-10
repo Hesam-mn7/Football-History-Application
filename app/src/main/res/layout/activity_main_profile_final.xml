@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityProfileFinal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorTitle">
+        <ImageView
+            android:id="@+id/backk"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/back"/>
+        <TextView
+            style="@style/titleDetail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/backk"
+            android:layout_marginRight="20dp"
+            android:text="فوتبالی من"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvtext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="مشخصاتی که وارد کردید را بررسی کنید در صورتی که درست است کلمه ثبت را بزنید تا عضویت انجام شود و یا اگر می خواهید اطلاعات را ویرایش کنید بر روی ویرایش کلیک کنید ."
+        android:textColor="#000"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tvName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="نام و نام خانوادگی : "
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvemail1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvtext1"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/tvfinalname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="علی"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/tvfinalemail"
+        app:layout_constraintRight_toLeftOf="@id/tvName1"
+        app:layout_constraintTop_toBottomOf="@id/tvtext1"
+        />
+    <TextView
+        android:id="@+id/tvemail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ایمیل : "
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvnumberphone1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName1"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/tvfinalemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="بببب"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/tvfinalnumberphone"
+        app:layout_constraintRight_toLeftOf="@id/tvemail1"
+        app:layout_constraintTop_toBottomOf="@id/tvfinalname"
+        />
+    <TextView
+        android:id="@+id/tvnumberphone1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="شماره موبایل : "
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvmoredalaghe1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvemail1"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/tvfinalnumberphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09127171"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/tvfinalmoredalaghe"
+        app:layout_constraintRight_toLeftOf="@id/tvnumberphone1"
+        app:layout_constraintTop_toBottomOf="@id/tvfinalemail"
+        />
+    <TextView
+        android:id="@+id/tvmoredalaghe1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="تیم مورد علاقه : "
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/llbutton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvnumberphone1"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/tvfinalmoredalaghe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="من یو"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/llbutton"
+        app:layout_constraintRight_toLeftOf="@id/tvmoredalaghe1"
+        app:layout_constraintTop_toBottomOf="@id/tvfinalnumberphone"
+        />
+
+    <LinearLayout
+        android:id="@+id/llbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvmoredalaghe1"
+        app:layout_constraintBottom_toTopOf="@id/llnavigation"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnozviat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_button_download"
+            android:text="عضویت"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:id="@+id/btnedit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_enseraf"
+            android:text="ویرایش"
+            android:textStyle="bold"
+            android:textColor="@color/colorRed"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/colorTitle"
+        >
+        <Button
+            android:id="@+id/btnsetting"
+            android:text="تنظیمات"
+            style="@style/actionbarTitle"
+            android:drawableTop="@drawable/ic_baseline_settings_24"
+
+            />
+        <Button
+            android:id="@+id/btndownload"
+            style="@style/actionbarTitle"
+            android:text="دانلود ها"
+            android:drawableTop="@drawable/ic_outline_get_app_24"
+
+            />
+        <Button
+            android:id="@+id/btnprofile"
+            style="@style/actionbarTitle"
+            android:text="فوتبالی من"
+            android:textStyle="bold"
+            android:textColor="@color/colorRed"
+            android:drawableTop="@drawable/ic_outline_account_box_red"
+            />
+        <Button
+            android:id="@+id/btndate"
+            style="@style/actionbarTitle"
+            android:text="دسته ها"
+            android:drawableTop="@drawable/ic_baseline_list"
+            />
+        <Button
+            android:id="@+id/bthome"
+            style="@style/actionbarTitle"
+            android:text="صفحه اصلی"
+            android:drawableTop="@drawable/ic_outline_home_24"
+
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

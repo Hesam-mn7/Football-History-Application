@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/redbackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="فوتبالی"
+            android:textColor="#fff"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:fontFamily="@font/andlso"
+            />
+
+        <EditText
+            android:id="@+id/etsearch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="جستجو"
+            android:textColorHint="#AFAFAF"
+            android:paddingRight="10dp"
+            android:textSize="20sp"
+            android:paddingLeft="10dp"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/barder_search"
+            android:layout_margin="20dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:id="@+id/tvbook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="کتاب های ورزشی"/>
+                <TextView
+                    android:id="@+id/more_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/more"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvbook"
+                    android:layoutDirection="rtl">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <ImageView
+                            android:id="@+id/imgbook1"
+                            style="@style/image"
+                            android:src="@drawable/footballdoshman"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            />
+                        <ImageView
+                            android:id="@+id/imgbook2"
+                            style="@style/image"
+                            android:src="@drawable/zandeghiname"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/imgbook1"/>
+                        <ImageView
+                            android:id="@+id/imgbook3"
+                            style="@style/image"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:src="@drawable/laws"
+                            app:layout_constraintRight_toLeftOf="@id/imgbook2"/>
+                        <ImageView
+                            android:id="@+id/imgbook4"
+                            style="@style/image"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:src="@drawable/tutorials"
+                            app:layout_constraintRight_toLeftOf="@id/imgbook3"/>
+                        <ImageView
+                            android:id="@+id/imgbook5"
+                            style="@style/image"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:src="@drawable/ruziruzeghari"
+                            app:layout_constraintRight_toLeftOf="@id/imgbook4"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tvbook1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/text"
+                            android:layout_marginRight="25dp"
+                            app:layout_constraintTop_toBottomOf="@id/imgbook1"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:text="فوتبال علیه دشمن"
+                            />
+                        <TextView
+                            android:id="@+id/tvbook2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/text"
+                            android:layout_marginRight="65dp"
+                            app:layout_constraintTop_toBottomOf="@id/imgbook2"
+                            app:layout_constraintRight_toLeftOf="@id/tvbook1"
+                            android:text="زندگینامه من"
+                            />
+                        <TextView
+                            android:id="@+id/tvbook3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/text"
+                            app:layout_constraintTop_toBottomOf="@id/imgbook3"
+                            app:layout_constraintRight_toLeftOf="@id/tvbook2"
+                            android:layout_marginRight="60dp"
+                            android:text="قوانین بازی فوتبال"
+                            />
+                        <TextView
+                            android:id="@+id/tvbook4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/text"
+                            android:layout_marginRight="55dp"
+                            app:layout_constraintTop_toBottomOf="@id/imgbook4"
+                            app:layout_constraintRight_toLeftOf="@id/tvbook3"
+                            android:text="آموزش فوتبال"
+                            />
+                        <TextView
+                            android:id="@+id/tvbook5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/text"
+                            android:layout_marginRight="45dp"
+                            app:layout_constraintTop_toBottomOf="@id/imgbook5"
+                            app:layout_constraintRight_toLeftOf="@id/tvbook4"
+                            android:text="روزی روزگاری فوتبال"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/music"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:layout_marginTop="20dp"
+                >
+                <TextView
+                    android:id="@+id/tvmusic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="سرود رسمی باشگاه ها"/>
+                <TextView
+                    android:id="@+id/moreMusic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/more"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <HorizontalScrollView
+                    android:id="@+id/hsvmusic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    app:layout_constraintTop_toBottomOf="@+id/tvmusic"
+                    tools:layout_editor_absoluteX="-50dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgmusic1"
+                            style="@style/image"
+                            android:src="@drawable/mu"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imgmusic2"
+                            style="@style/image"
+                            android:src="@drawable/liverpool"
+                            app:layout_constraintRight_toLeftOf="@id/imgmusic1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imgmusic3"
+                            style="@style/image"
+                            android:src="@drawable/real"
+                            app:layout_constraintRight_toLeftOf="@id/imgmusic2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imgmusic4"
+                            style="@style/image"
+                            android:src="@drawable/barcelona"
+                            app:layout_constraintRight_toLeftOf="@id/imgmusic3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imgmusic5"
+                            style="@style/image"
+                            android:src="@drawable/bayern"
+                            app:layout_constraintRight_toLeftOf="@id/imgmusic4"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvmusic1"
+                            style="@style/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="38dp"
+                            android:text="منچستریونایتد"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/imgmusic1" />
+
+                        <TextView
+                            android:id="@+id/tvmusic2"
+                            style="@style/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="55dp"
+                            android:text="لیورپول"
+                            app:layout_constraintRight_toLeftOf="@id/imgmusic1"
+                            app:layout_constraintTop_toBottomOf="@id/imgmusic2" />
+
+                        <TextView
+                            android:id="@+id/tvmusic3"
+                            style="@style/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="48dp"
+                            android:text="رئال مادرید"
+                            app:layout_constraintRight_toLeftOf="@id/imgmusic2"
+                            app:layout_constraintTop_toBottomOf="@id/imgmusic3" />
+
+                        <TextView
+                            android:id="@+id/tvmusic4"
+                            style="@style/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="50dp"
+                            android:text="بارسلونا"
+                            app:layout_constraintRight_toLeftOf="@id/imgmusic3"
+                            app:layout_constraintTop_toBottomOf="@id/imgmusic4" />
+
+                        <TextView
+                            android:id="@+id/tvmusic5"
+                            style="@style/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="50dp"
+                            android:text="بایرن مونیخ"
+                            app:layout_constraintRight_toLeftOf="@id/imgmusic4"
+                            app:layout_constraintTop_toBottomOf="@id/imgmusic5" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/tvvideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/hsvmusic"
+                        app:layout_constraintRight_toRightOf="parent"
+                        style="@style/Title"
+                        android:layout_marginTop="20sp"
+                        android:text="خلاصه ی بازی های ماندگار"/>
+                    <TextView
+                        android:id="@+id/moreVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/more"
+                        app:layout_constraintTop_toBottomOf="@id/hsvmusic"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+                <GridView
+                    android:id="@+id/gvVideo"
+                    android:numColumns="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tvvideo"
+                    android:layout_margin="10dp"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/colorTitle"
+        >
+        <Button
+            android:id="@+id/btnsetting"
+            android:text="تنظیمات"
+            style="@style/actionbarTitle"
+            android:drawableTop="@drawable/ic_baseline_settings_24"
+
+            />
+        <Button
+            android:id="@+id/btndownload"
+            style="@style/actionbarTitle"
+            android:text="دانلود ها"
+            android:drawableTop="@drawable/ic_outline_get_app_24"
+
+            />
+        <Button
+            android:id="@+id/btnprofile"
+            style="@style/actionbarTitle"
+            android:text="فوتبالی من"
+            android:drawableTop="@drawable/ic_outline_account_box_24"
+            />
+
+        <Button
+            android:id="@+id/btndate"
+            style="@style/actionbarTitle"
+            android:text="دسته ها"
+            android:drawableTop="@drawable/ic_baseline_list"
+            />
+        <Button
+            android:id="@+id/bthome"
+            style="@style/actionbarTitle"
+            android:text="صفحه اصلی"
+            android:textColor="@color/colorRed"
+            android:drawableTop="@drawable/ic_outline_home_red"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
